@@ -11,8 +11,8 @@ import torch.nn.functional as F
 
 READ_DIM = 128
 VOCAB = 128
-DEFAULT_CARRY_DIM = 128
-DEFAULT_NUM_FF = 4
+DEFAULT_CARRY_DIM = 896 # 128 + 896 = 1024, for A500
+DEFAULT_NUM_FF = 2
 
 # Logit scaling for read @ head; preserved from the original kernel model.
 LOGIT_SCALE = 1.0 / 16.0
